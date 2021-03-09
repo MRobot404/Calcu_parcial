@@ -1,12 +1,12 @@
 package com.mycompany.calcu_parcial;
 // @author fsociety
-
+import java.lang.Math;
 public class Pantalla extends javax.swing.JFrame {
 
     private double numero1;
     private double numero2;
     private char operacion;
-    public static int shift = 0;
+    private  int shift = 0;
 
     public Pantalla() {
         initComponents();
@@ -69,7 +69,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton23);
-        jButton23.setBounds(20, 90, 60, 24);
+        jButton23.setBounds(20, 90, 60, 25);
 
         Ingreso.setEditable(false);
         Ingreso.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -83,7 +83,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(90, 130, 50, 24);
+        jButton1.setBounds(90, 130, 50, 25);
 
         jButton2.setText("^1/2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +92,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(140, 130, 60, 24);
+        jButton2.setBounds(140, 130, 60, 25);
 
         jButton3.setText("CE");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +101,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(200, 130, 50, 24);
+        jButton3.setBounds(200, 130, 50, 25);
 
         jButton4.setText("C");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +110,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(250, 130, 50, 24);
+        jButton4.setBounds(250, 130, 50, 25);
 
         jButton5.setText("2");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +119,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(130, 310, 50, 24);
+        jButton5.setBounds(130, 310, 50, 25);
 
         jButton6.setText("1");
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -129,7 +129,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(80, 310, 50, 24);
+        jButton6.setBounds(80, 310, 50, 25);
 
         jButton7.setText("3");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +138,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(180, 310, 50, 24);
+        jButton7.setBounds(180, 310, 50, 25);
 
         jButton8.setText("+");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +147,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(230, 310, 50, 24);
+        jButton8.setBounds(230, 310, 50, 25);
 
         jButton9.setText("-");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -156,7 +156,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(280, 310, 50, 24);
+        jButton9.setBounds(280, 310, 50, 25);
 
         jButton10.setText("5");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -165,7 +165,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton10);
-        jButton10.setBounds(130, 350, 50, 24);
+        jButton10.setBounds(130, 350, 50, 25);
 
         jButton11.setText("4");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -174,7 +174,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton11);
-        jButton11.setBounds(80, 350, 50, 24);
+        jButton11.setBounds(80, 350, 50, 25);
 
         jButton12.setText("6");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -183,7 +183,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton12);
-        jButton12.setBounds(180, 350, 50, 24);
+        jButton12.setBounds(180, 350, 50, 25);
 
         jButton13.setText("*");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
@@ -192,7 +192,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton13);
-        jButton13.setBounds(230, 350, 50, 24);
+        jButton13.setBounds(230, 350, 50, 25);
 
         jButton14.setText("/");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +201,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton14);
-        jButton14.setBounds(280, 350, 50, 24);
+        jButton14.setBounds(280, 350, 50, 25);
 
         jButton15.setText("8");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -210,7 +210,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton15);
-        jButton15.setBounds(130, 390, 50, 24);
+        jButton15.setBounds(130, 390, 50, 25);
 
         jButton16.setText("7");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
@@ -219,7 +219,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton16);
-        jButton16.setBounds(80, 390, 50, 24);
+        jButton16.setBounds(80, 390, 50, 25);
 
         jButton17.setText("9");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -228,7 +228,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton17);
-        jButton17.setBounds(180, 390, 50, 24);
+        jButton17.setBounds(180, 390, 50, 25);
 
         jButton18.setText("0");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
@@ -237,7 +237,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton18);
-        jButton18.setBounds(230, 390, 50, 24);
+        jButton18.setBounds(230, 390, 50, 25);
 
         jButton19.setText(".");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
@@ -246,7 +246,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton19);
-        jButton19.setBounds(280, 390, 50, 24);
+        jButton19.setBounds(280, 390, 50, 25);
 
         jButton20.setText("+/-");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
@@ -255,7 +255,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton20);
-        jButton20.setBounds(140, 500, 60, 24);
+        jButton20.setBounds(170, 500, 60, 25);
 
         jButton21.setText("=");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
@@ -264,7 +264,7 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton21);
-        jButton21.setBounds(200, 500, 79, 24);
+        jButton21.setBounds(230, 500, 79, 25);
 
         jButton22.setText("x⁻¹");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
@@ -273,11 +273,11 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton22);
-        jButton22.setBounds(20, 200, 64, 24);
+        jButton22.setBounds(20, 200, 64, 25);
 
         jLabel1.setText("x!");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(40, 180, 20, 16);
+        jLabel1.setBounds(50, 180, 20, 15);
 
         jButton24.setText("x10×");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
@@ -286,11 +286,11 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton24);
-        jButton24.setBounds(80, 500, 64, 24);
+        jButton24.setBounds(110, 500, 64, 25);
 
         jLabel2.setText("^1/3");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 110, 30, 16);
+        jLabel2.setBounds(160, 110, 30, 15);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -431,7 +431,17 @@ public class Pantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-        // TODO add your handling code here:
+        //Inverso Multiplicativo y Factorial 
+        if (shift==1) {
+         numero1=Double.parseDouble(Ingreso.getText());
+         Recursividad recursividad=new Recursividad();
+         int factorial = recursividad.Factorial((int) numero1);
+         Ingreso.setText(String.valueOf(factorial));
+        }else{
+         numero1=Double.parseDouble(Ingreso.getText());
+         
+        }
+        
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
