@@ -73,10 +73,20 @@ public static int Valor;
         jButton4.setBounds(200, 140, 50, 24);
 
         jButton5.setText("2");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton5);
         jButton5.setBounds(70, 270, 50, 24);
 
         jButton6.setText("1");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton6);
         jButton6.setBounds(20, 270, 50, 24);
 
@@ -165,6 +175,14 @@ public static int Valor;
         // Boton Shift
         
     }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        //Boton #1
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        //Boton #2
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     
     
