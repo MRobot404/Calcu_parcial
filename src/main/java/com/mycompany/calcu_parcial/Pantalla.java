@@ -48,11 +48,11 @@ public static int Valor;
 
         jButton1.setText("^2");
         getContentPane().add(jButton1);
-        jButton1.setBounds(40, 140, 50, 25);
+        jButton1.setBounds(40, 140, 50, 24);
 
         jButton2.setText("^1/2");
         getContentPane().add(jButton2);
-        jButton2.setBounds(90, 140, 60, 25);
+        jButton2.setBounds(90, 140, 60, 24);
 
         jButton3.setText("CE");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -61,7 +61,7 @@ public static int Valor;
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(150, 140, 50, 25);
+        jButton3.setBounds(150, 140, 50, 24);
 
         jButton4.setText("C");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -70,77 +70,76 @@ public static int Valor;
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(200, 140, 50, 25);
+        jButton4.setBounds(200, 140, 50, 24);
 
         jButton5.setText("2");
         getContentPane().add(jButton5);
-        jButton5.setBounds(70, 270, 50, 25);
+        jButton5.setBounds(70, 270, 50, 24);
 
         jButton6.setText("1");
         getContentPane().add(jButton6);
-        jButton6.setBounds(20, 270, 50, 25);
+        jButton6.setBounds(20, 270, 50, 24);
 
         jButton7.setText("3");
         getContentPane().add(jButton7);
-        jButton7.setBounds(120, 270, 50, 25);
+        jButton7.setBounds(120, 270, 50, 24);
 
         jButton8.setText("+");
         getContentPane().add(jButton8);
-        jButton8.setBounds(170, 270, 50, 25);
+        jButton8.setBounds(170, 270, 50, 24);
 
         jButton9.setText("-");
         getContentPane().add(jButton9);
-        jButton9.setBounds(220, 270, 50, 25);
+        jButton9.setBounds(220, 270, 50, 24);
 
         jButton10.setText("5");
         getContentPane().add(jButton10);
-        jButton10.setBounds(70, 310, 50, 25);
+        jButton10.setBounds(70, 310, 50, 24);
 
         jButton11.setText("4");
         getContentPane().add(jButton11);
-        jButton11.setBounds(20, 310, 50, 25);
+        jButton11.setBounds(20, 310, 50, 24);
 
         jButton12.setText("6");
         getContentPane().add(jButton12);
-        jButton12.setBounds(120, 310, 50, 25);
+        jButton12.setBounds(120, 310, 50, 24);
 
         jButton13.setText("*");
         getContentPane().add(jButton13);
-        jButton13.setBounds(170, 310, 50, 25);
+        jButton13.setBounds(170, 310, 50, 24);
 
         jButton14.setText("/");
         getContentPane().add(jButton14);
-        jButton14.setBounds(220, 310, 50, 25);
+        jButton14.setBounds(220, 310, 50, 24);
 
         jButton15.setText("8");
         getContentPane().add(jButton15);
-        jButton15.setBounds(70, 350, 50, 25);
+        jButton15.setBounds(70, 350, 50, 24);
 
         jButton16.setText("7");
         getContentPane().add(jButton16);
-        jButton16.setBounds(20, 350, 50, 25);
+        jButton16.setBounds(20, 350, 50, 24);
 
         jButton17.setText("9");
         getContentPane().add(jButton17);
-        jButton17.setBounds(120, 350, 50, 25);
+        jButton17.setBounds(120, 350, 50, 24);
 
         jButton18.setText("0");
         getContentPane().add(jButton18);
-        jButton18.setBounds(170, 350, 50, 25);
+        jButton18.setBounds(170, 350, 50, 24);
 
         jButton19.setText(".");
         getContentPane().add(jButton19);
-        jButton19.setBounds(220, 350, 50, 25);
+        jButton19.setBounds(220, 350, 50, 24);
 
         jButton20.setText("+/-");
         getContentPane().add(jButton20);
-        jButton20.setBounds(90, 430, 60, 25);
+        jButton20.setBounds(90, 430, 60, 24);
 
         jButton21.setText("=");
         getContentPane().add(jButton21);
-        jButton21.setBounds(150, 430, 79, 25);
+        jButton21.setBounds(150, 430, 79, 24);
 
-        jButton22.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jButton22.setText("Shift");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +147,7 @@ public static int Valor;
             }
         });
         getContentPane().add(jButton22);
-        jButton22.setBounds(10, 100, 58, 26);
+        jButton22.setBounds(10, 100, 36, 24);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

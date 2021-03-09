@@ -5,6 +5,7 @@ package com.mycompany.calcu_parcial;
     Pantalla p=new Pantalla();
     p.setVisible(true);
      //Hello Friend
+     //Thats lame
     }
     
 }
