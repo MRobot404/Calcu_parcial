@@ -54,6 +54,7 @@ public class Pantalla extends javax.swing.JFrame {
         jButton22 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton24 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -62,6 +63,11 @@ public class Pantalla extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jButton23.setText("Shift");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton23);
         jButton23.setBounds(20, 90, 60, 24);
 
@@ -282,6 +288,10 @@ public class Pantalla extends javax.swing.JFrame {
         getContentPane().add(jButton24);
         jButton24.setBounds(80, 500, 64, 24);
 
+        jLabel2.setText("^1/3");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(160, 110, 30, 16);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -406,10 +416,18 @@ public class Pantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        //Raíz Cuadrada
+        //Raíz Cuadrada y Cúbica
+        if (shift==1) {
+         numero1=Double.parseDouble(Ingreso.getText());
+         numero1=Math.cbrt(numero1);
+         Ingreso.setText(String.valueOf(numero1));
+         
+         shift=0;
+        }else {
         numero1=Double.parseDouble(Ingreso.getText());
         numero1= Math.sqrt(numero1);
         Ingreso.setText(String.valueOf(numero1));
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
@@ -419,6 +437,11 @@ public class Pantalla extends javax.swing.JFrame {
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        //Shift
+        shift=1;
+    }//GEN-LAST:event_jButton23ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -448,5 +471,6 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
