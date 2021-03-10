@@ -490,9 +490,16 @@ public class Pantalla extends javax.swing.JFrame {
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         //Log y e
+        if (shift==1) {
+         numero1=Double.parseDouble(Ingreso.getText());
+         numero1= Math.pow(2.71828, numero1);
+         Ingreso.setText(String.valueOf(numero1));
+        }else{
+        
         numero1=Double.parseDouble(Ingreso.getText());
         numero1=Math.log10(numero1);
         Ingreso.setText(String.valueOf(numero1));
+        }
     }//GEN-LAST:event_jButton25ActionPerformed
 
 
