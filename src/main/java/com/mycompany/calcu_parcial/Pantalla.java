@@ -1,12 +1,14 @@
 package com.mycompany.calcu_parcial;
 // @author fsociety
+
 import java.lang.Math;
+
 public class Pantalla extends javax.swing.JFrame {
 
     private double numero1;
     private double numero2;
     private char operacion;
-    private  int shift = 0;
+    private int shift = 0;
 
     public Pantalla() {
         initComponents();
@@ -55,6 +57,9 @@ public class Pantalla extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton24 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton25 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -292,6 +297,23 @@ public class Pantalla extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(160, 110, 30, 15);
 
+        jLabel3.setText("π");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(130, 480, 20, 15);
+
+        jButton25.setText("log");
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton25);
+        jButton25.setBounds(80, 200, 60, 25);
+
+        jLabel4.setText("e");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(100, 180, 20, 15);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -302,10 +324,11 @@ public class Pantalla extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         //Limpiar todo 
-        numero1=0;
-        numero2=0;
-        operacion=' ';
+        numero1 = 0;
+        numero2 = 0;
+        operacion = ' ';
         Ingreso.setText(" ");
+        shift = 0;
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -410,48 +433,68 @@ public class Pantalla extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //Elevación Cuadrado
-        numero1=Double.parseDouble(Ingreso.getText());
-        numero1 *=numero1;
+        numero1 = Double.parseDouble(Ingreso.getText());
+        numero1 *= numero1;
         Ingreso.setText(String.valueOf(numero1));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //Raíz Cuadrada y Cúbica
-        if (shift==1) {
-         numero1=Double.parseDouble(Ingreso.getText());
-         numero1=Math.cbrt(numero1);
-         Ingreso.setText(String.valueOf(numero1));
-         
-         shift=0;
-        }else {
-        numero1=Double.parseDouble(Ingreso.getText());
-        numero1= Math.sqrt(numero1);
-        Ingreso.setText(String.valueOf(numero1));
+        if (shift == 1) {
+            numero1 = Double.parseDouble(Ingreso.getText());
+            numero1 = Math.cbrt(numero1);
+            Ingreso.setText(String.valueOf(numero1));
+
+            shift = 0;
+        } else {
+            numero1 = Double.parseDouble(Ingreso.getText());
+            numero1 = Math.sqrt(numero1);
+            Ingreso.setText(String.valueOf(numero1));
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         //Inverso Multiplicativo y Factorial 
-        if (shift==1) {
-         numero1=Double.parseDouble(Ingreso.getText());
-         Recursividad recursividad=new Recursividad();
-         int factorial = recursividad.Factorial((int) numero1);
-         Ingreso.setText(String.valueOf(factorial));
-        }else{
-         numero1=Double.parseDouble(Ingreso.getText());
-         
+        if (shift == 1) {
+            numero1 = Double.parseDouble(Ingreso.getText());
+            Recursividad recursividad = new Recursividad();
+            int factorial = recursividad.Factorial((int) numero1);
+            Ingreso.setText(String.valueOf(factorial));
+            shift = 0;
+        } else {
+            numero1 = Double.parseDouble(Ingreso.getText());
+            if (numero1 % 1 == 0) {
+
+            }
         }
-        
+
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
-        // TODO add your handling code here:
+        //Potencia de 10 y Pi
+        int base10 = 1;
+        if (shift == 1) {
+        Ingreso.setText("3.1416"+Ingreso.getText());
+        } else {
+            numero1 = Double.parseDouble(Ingreso.getText());
+            for (int i = 0; i < numero1; i++) {
+                base10 = base10 * 10;
+            }
+            Ingreso.setText(String.valueOf(base10));
+        }
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
         //Shift
-        shift=1;
+        shift = 1;
     }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        //Log y e
+        numero1=Double.parseDouble(Ingreso.getText());
+        numero1=Math.log10(numero1);
+        Ingreso.setText(String.valueOf(numero1));
+    }//GEN-LAST:event_jButton25ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -473,6 +516,7 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -482,5 +526,7 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
